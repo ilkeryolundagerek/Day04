@@ -57,6 +57,7 @@ namespace MVCTemplate.Areas.Dashboard.Controllers
             {
                 return View(model);
             }
+            
         }
 
         [HttpPost]
