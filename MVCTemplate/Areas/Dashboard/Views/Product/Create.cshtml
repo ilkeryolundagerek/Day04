@@ -1,0 +1,30 @@
+﻿@model Tuple<ProductViewModel,CategoryViewModel>
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ProductViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col">
+        <h2>Product Create Form</h2>
+        <partial name="CreateProduct" model="Model.Item1" />
+    </div>
+    <div class="col">
+        <h2>Category Create Form</h2>
+        <partial name="CreateCategory" model="Model.Item2" />
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
